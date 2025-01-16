@@ -109,23 +109,50 @@ The system captures video input and processes it to:
 ![MAR Formula](Assets/MAR.png)
 
 
-## Algorithm and Implementation
+### **Algorithm and Implementation**
 
-### Algorithmic Steps
-1. Capture video input using a camera.
-2. Detect face and facial landmarks using dlib.
-3. Calculate EAR and MAR:
-   - EAR below threshold for consecutive frames → eyes closed.
-   - MAR above threshold for consecutive frames → yawning.
-4. Trigger alerts (alarm and/or vehicle speed reduction) based on EAR/MAR thresholds.
+#### **Algorithmic Steps**
+1. **Capture Input**:
+   - Use a camera to capture the video stream of the driver.
+   - This task was performed using the built-in camera of a Mac.
+   - Extract the first frame to initialize the system.
 
-### Tools and Libraries
-- **OpenCV:** For real-time image processing.
-- **dlib:** For facial landmark detection.
-- **SciPy:** For Euclidean distance calculations.
-- **playsound:** For alert audio.
+2. **Face Detection**:
+   - Detect the driver's face using a face detection algorithm.
+   - If face detection is unsuccessful, repeat the process with subsequent frames.
 
----
+3. **Face Component Detection**:
+   - Identify and extract key components of the face, such as eyes and mouth, using facial landmark detection.
+
+4. **Face Component Tracking**:
+   - Track the detected components over consecutive frames for consistency.
+
+5. **Drowsiness Detection**:
+   - Calculate:
+     - **Eye Aspect Ratio (EAR)**: Detect prolonged eye closures.
+     - **Mouth Aspect Ratio (MAR)**: Identify yawning.
+   - Check thresholds:
+     - **EAR** below the threshold for consecutive frames → Eyes closed → Possible drowsiness.
+     - **MAR** above the threshold for consecutive frames → Yawning → Possible fatigue.
+
+6. **Alert Creation**:
+   - If drowsiness is detected, trigger an alert system:
+     - Sound an alarm using the `pygame` library for precise control of the alarm sound.
+     - Optionally, reduce vehicle speed.
+
+#### **Tools and Libraries**
+- **OpenCV**: Used for real-time image processing.
+- **dlib**: For detecting and tracking facial landmarks.
+- **SciPy**: For calculating Euclidean distances in EAR and MAR.
+- **pygame**: Used to control the playback of the alarm sound.
+- **Mac Camera**: Used to capture the video stream during implementation and testing.
+
+#### **Flowchart**
+Below is the visual representation of the algorithm workflow:
+
+![Drowsiness Detection Flowchart](Assets/Flow Chart.png)
+
+This flowchart clearly outlines the steps taken by the system, from video capture to drowsiness detection and alert generation.
 
 ### Experimental Results
 
