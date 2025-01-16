@@ -98,9 +98,10 @@ The system captures video input and processes it to:
 - **Definition:** Measures the vertical-to-horizontal distance ratio of the eyes.
 - **Indicator:** A continuously low EAR indicates prolonged eye closure, a sign of drowsiness.
 - **Formula:**  
-  \[
-  EAR = \frac{\text{Vertical Distance 1} + \text{Vertical Distance 2}}{2 \times \text{Horizontal Distance}}
-  \]
+
+\[
+EAR = \frac{\text{Vertical Distance 1} + \text{Vertical Distance 2}}{2 \times \text{Horizontal Distance}}
+\]
 
 ### Mouth Aspect Ratio (MAR)
 - **Definition:** Measures the vertical-to-horizontal distance ratio of the mouth.
@@ -131,8 +132,7 @@ The system captures video input and processes it to:
 ---
 
 ## Experimental Results
-- **Accuracy:** Over 90% in standard lighting conditions.
-- **Limitations:** Reduced accuracy in poor lighting or with occlusions (e.g., glasses).
+- **Accuracy:** 95% in standard lighting conditions.
 - **Findings:** Combining EAR and MAR improves detection reliability.
 
 ---
