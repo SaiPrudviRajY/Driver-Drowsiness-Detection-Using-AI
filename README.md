@@ -97,21 +97,17 @@ The system captures video input and processes it to:
 ### Eye Aspect Ratio (EAR)
 - **Definition:** Measures the vertical-to-horizontal distance ratio of the eyes.
 - **Indicator:** A continuously low EAR indicates prolonged eye closure, a sign of drowsiness.
-- **Formula:**  
+- **Formula:**
 
-\[
-EAR = \frac{\text{Vertical Distance 1} + \text{Vertical Distance 2}}{2 \times \text{Horizontal Distance}}
-\]
+![EAR Formula](Assets/EAR.png)
 
 ### Mouth Aspect Ratio (MAR)
 - **Definition:** Measures the vertical-to-horizontal distance ratio of the mouth.
 - **Indicator:** A high MAR indicates yawning, which is a key sign of fatigue.
-- **Formula:**  
-  \[
-  MAR = \frac{\text{Vertical Distance (Mouth Open)}}{\text{Horizontal Distance (Mouth Width)}}
-  \]
+- **Formula:**
 
----
+![MAR Formula](Assets/MAR.png)
+
 
 ## Algorithm and Implementation
 
