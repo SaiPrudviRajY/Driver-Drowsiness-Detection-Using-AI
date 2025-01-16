@@ -127,9 +127,15 @@ The system captures video input and processes it to:
 
 ---
 
-## Experimental Results
+### Experimental Results
+
 - **Accuracy:** 95% in standard lighting conditions.
 - **Findings:** Combining EAR and MAR improves detection reliability.
+
+#### Classification Report
+The classification report summarizes the performance of the drowsiness detection model.
+
+![Classification Report](Assets/classification_report.png)
 
 ---
 
