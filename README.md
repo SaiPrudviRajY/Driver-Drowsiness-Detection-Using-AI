@@ -135,7 +135,7 @@ The system captures video input and processes it to:
 #### Classification Report
 The classification report summarizes the performance of the drowsiness detection model.
 
-![Classification Report](Assets/classification_report.png)
+![Classification Report](classification_report.png)
 
 ---
 
