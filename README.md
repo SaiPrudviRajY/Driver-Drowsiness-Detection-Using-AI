@@ -150,7 +150,7 @@ The system captures video input and processes it to:
 #### **Flowchart**
 Below is the visual representation of the algorithm workflow:
 
-![Drowsiness Detection Flowchart](Assets/Flow Chart.png)
+![Drowsiness Detection Flowchart](Assets/FlowChart.png)
 
 This flowchart clearly outlines the steps taken by the system, from video capture to drowsiness detection and alert generation.
 
