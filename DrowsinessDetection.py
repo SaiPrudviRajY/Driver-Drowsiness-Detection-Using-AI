@@ -35,7 +35,7 @@ def calculate_MAR(mouth):
 
 # Thresholds and counters (parameters for detecting drowsiness and yawning)
 EYE_AR_THRESH = 0.27  # EAR threshold for detecting eye closure
-EYE_AR_CONSEC_FRAMES = 40  # Minimum consecutive frames for eye closure detection
+EYE_AR_CONSEC_FRAMES = 25  # Minimum consecutive frames for eye closure detection
 MAR_THRESH = 0.6  # MAR threshold for detecting yawning
 MAR_CONSEC_FRAMES = 8  # Minimum consecutive frames for yawn detection
 COUNTER = 0  # Counter for frames with eyes closed
