@@ -1,8 +1,8 @@
-streamlit
-opencv-python-headless
-dlib
+opencv-python-headless==4.5.5.64
+dlib==19.24.0
 imutils
 scipy
 pygame
 numpy
 pillow
+
